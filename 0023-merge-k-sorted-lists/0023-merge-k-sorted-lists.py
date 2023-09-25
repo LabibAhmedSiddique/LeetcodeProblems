@@ -6,10 +6,10 @@
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
         arr=[]
-        for i in range(len(lists)):
-            while lists[i]:
-                arr.append(lists[i].val)
-                lists[i]=lists[i].next
+        for k in lists:
+            while k:
+                arr.append(k.val)
+                k=k.next
         arr=sorted(arr)
         if not arr :
             return None
