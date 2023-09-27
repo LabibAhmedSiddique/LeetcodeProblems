@@ -8,6 +8,6 @@ class Solution:
                 freq[n]=freq[n]+1
        
         sorted_dict = {k: v for k, v in sorted(freq.items(), key=lambda item: item[1],reverse=True)}  
-        print(sorted_dict)
-        arr=list(sorted_dict)
-        return arr[0:k]
+        
+        arr=list(sorted_dict)[:k]
+        return arr
