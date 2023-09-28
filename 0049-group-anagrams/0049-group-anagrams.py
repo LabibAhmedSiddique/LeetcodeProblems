@@ -1,16 +1,13 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         s={}
-
-        for i, z in enumerate(strs):
-            k=''.join(sorted(z))
-            if k not in s:
-                s[k]=[strs[i]]
+        for word in strs:
+            a=''.join(sorted(word))
+            
+            if a not in s:
+                s[a]=[word]
+                
             else:
-                s[k]+=[strs[i]]   
-
-        
-        f=[]
-        for vals in s.values():
-            f.append(vals)
-        return f
+                s[a]+=[word]
+                
+        return list(s.values())        
