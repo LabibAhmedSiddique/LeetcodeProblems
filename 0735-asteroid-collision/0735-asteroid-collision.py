@@ -9,6 +9,7 @@ class Solution:
                     break    
                 else: 
                     s.pop(); break
-            else: s.append(a)        
+            else: 
+                s.append(a)        
         return s
         
